@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Navigation Example</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment_text">Home Fragment</string>
+    <string name="settings_fragment_button_clear">Clear text</string>
+    <string name="settings_fragment_button_coroutines">Start coroutines</string>
+    <string name="user_row_first_name">Ionut Alexandru</string>
+    <string name="user_row_last_name">Nica</string>
+    <string name="user_row_email">example_email@gmail.com</string>
+</resources>

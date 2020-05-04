@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="calcExpression"
+            type="net.kotlinproject.viewmodel.DemoViewModel"/>
+    </data>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        tools:context=".ui.MainActivity">
+
+    <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:textColor="@color/actionButton"
+            android:textSize="30sp"
+            android:text="@{calcExpression.theExpression}"/>
+
+
+    <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="end"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:text="@{calcExpression.theResult}"/>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/tvClear"
+                    style="@style/ActionButtonStyle"
+                    android:scaleType="center"
+                    android:src="@drawable/back_button"
+                    android:text="CLEAR"
+                    android:onClick="@{() ->calcExpression.addToExpressionClear()}"/>
+
+            <TextView
+                    android:id="@+id/tvDivide"
+                    style="@style/ActionButtonStyle"
+                    android:text="/"
+                    android:onClick="@{() ->calcExpression.addToExpressionDivide()}"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tvSeven"
+                    style="@style/NumberButtonStyle"
+                    android:text="7"
+                    android:onClick="@{() ->calcExpression.addToExpression7()}"/>
+
+            <TextView
+                    android:id="@+id/tvEight"
+                    style="@style/NumberButtonStyle"
+                    android:text="8"
+                    android:onClick="@{() ->calcExpression.addToExpression8()}"/>
+
+            <TextView
+                    android:id="@+id/tvNine"
+                    style="@style/NumberButtonStyle"
+                    android:text="9"
+                    android:onClick="@{() ->calcExpression.addToExpression9()}"/>
+
+            <TextView
+                    android:id="@+id/tvMul"
+                    style="@style/NumberActionButton2"
+                    android:text="*"
+                    android:onClick="@{() ->calcExpression.addToExpressionMultiply()}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tvFour"
+                    style="@style/NumberButtonStyle"
+                    android:text="4"
+                    android:onClick="@{() ->calcExpression.addToExpression4()}"/>
+
+            <TextView
+                    android:id="@+id/tvFive"
+                    style="@style/NumberButtonStyle"
+                    android:text="5"
+                    android:onClick="@{() ->calcExpression.addToExpression5()}"/>
+
+            <TextView
+                    android:id="@+id/tvSix"
+                    style="@style/NumberButtonStyle"
+                    android:text="6"
+                    android:onClick="@{() ->calcExpression.addToExpression6()}"/>
+
+            <TextView
+                    android:id="@+id/tvMinus"
+                    style="@style/NumberActionButton2"
+                    android:text="-"
+                    android:onClick="@{() ->calcExpression.addToExpressionMinus()}"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tvOne"
+                    style="@style/NumberButtonStyle"
+                    android:text="1"
+                    android:onClick="@{() ->calcExpression.addToExpression1()}"/>
+
+
+            <TextView
+                    android:id="@+id/tvTwo"
+                    style="@style/NumberButtonStyle"
+                    android:text="2"
+                    android:onClick="@{() ->calcExpression.addToExpression2()}"/>
+
+            <TextView
+                    android:id="@+id/tvThree"
+                    style="@style/NumberButtonStyle"
+                    android:text="3"
+                    android:onClick="@{() ->calcExpression.addToExpression3()}"/>
+
+            <TextView
+                    android:id="@+id/tvPlus"
+                    style="@style/NumberActionButton2"
+                    android:text="+"
+                    android:onClick="@{() ->calcExpression.addToExpressionPlus()}"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tvDot"
+                    style="@style/NumberButtonStyle"
+                    android:text="."
+                    android:onClick="@{() ->calcExpression.addToExpressionDot()}"/>
+
+            <TextView
+                    android:id="@+id/tvZero"
+                    style="@style/NumberButtonStyle"
+                    android:text="0"
+                    android:onClick="@{() ->calcExpression.addToExpression0()}"/>
+
+            <ImageView
+                    android:id="@+id/tvBack"
+                    style="@style/NumberButtonStyle"
+                    android:scaleType="center"
+                    android:src="@drawable/undo_white"
+                    android:text="DEL"
+                    android:onClick="@{() ->calcExpression.addToExpressionBack()}"/>
+
+            <TextView
+                    android:id="@+id/tvEquals"
+                    style="@style/EqualButtonStyle"
+                    android:text="="
+                    android:onClick="@{() ->calcExpression.addToExpressionEquals()}"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>
