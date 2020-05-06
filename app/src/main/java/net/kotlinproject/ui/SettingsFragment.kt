@@ -18,7 +18,7 @@ class SettingsFragment : Fragment()  {
     ): View? {
 
         binding = FragmentSettingsBinding.inflate(layoutInflater)
-        binding.resultTextView = DemoViewModel() // Injecting the view model into the layout file
+        binding.demoViewModel = DemoViewModel() // Injecting the view model into the layout file
         return binding.root
     }
 }

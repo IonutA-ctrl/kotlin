@@ -6,7 +6,7 @@
     <data>
         <import type="android.view.View"/>
         <variable
-            name="resultTextView"
+            name="demoViewModel"
             type="net.kotlinproject.viewmodel.DemoViewModel" />
     </data>
 <LinearLayout
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/settings_fragment_button_coroutines"
-                android:onClick="@{() ->resultTextView.coroutinesButtonClicked()}"
+                android:onClick="@{() ->demoViewModel.coroutinesButtonClicked()}"
             />
 
         <Button
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/settings_fragment_button_clear"
-                android:onClick="@{() -> resultTextView.clearButtonClicked()}"/>
+                android:onClick="@{() -> demoViewModel.clearButtonClicked()}"/>
 
     </LinearLayout>
     <LinearLayout
@@ -50,7 +50,7 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="@{resultTextView.text_result}"/>
+        android:text="@{demoViewModel.text_result}"/>
 
     </LinearLayout>
 
