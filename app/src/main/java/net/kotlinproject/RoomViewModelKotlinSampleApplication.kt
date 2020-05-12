@@ -1,8 +1,8 @@
-package soumyajitdas.com.roomviewmodelkotlinsample
+package net.kotlinproject
 
 import android.app.Application
 import androidx.room.Room
-import soumyajitdas.com.roomviewmodelkotlinsample.DB.CountryDatabase
+import net.kotlinproject.db.CountryDatabase
 
 class RoomViewModelKotlinSampleApplication : Application() {
 

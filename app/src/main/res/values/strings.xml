@@ -6,7 +6,9 @@
     <string name="home_fragment_text">Home Fragment</string>
     <string name="settings_fragment_button_clear">Clear text</string>
     <string name="settings_fragment_button_coroutines">Start coroutines</string>
-    <string name="user_row_first_name">Ionut Alexandru</string>
-    <string name="user_row_last_name">Nica</string>
-    <string name="user_row_email">example_email@gmail.com</string>
+    <string name="country_name">Country_name</string>
+    <string name="capital">Capital</string>
+    <string name="capital_name">Name</string>
+    <string name="population">Population</string>
+    <string name="population_number">Number</string>
 </resources>

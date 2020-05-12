@@ -1,44 +1,39 @@
-package soumyajitdas.com.roomviewmodelkotlinsample
+package net.kotlinproject
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import net.kotlinproject.R
-import soumyajitdas.com.roomviewmodelkotlinsample.Model.CountryModel
+import net.kotlinproject.model.CountryModel
+import net.kotlinproject.databinding.SingleCountryModelLayoutBinding
+
 
 class CountryRecyclerViewAdapter(_context : Context, _countryList:List<CountryModel>) : RecyclerView.Adapter<CountryRecyclerViewAdapter.CountryViewHolder>() {
 
-    val context = _context
+
     val countryList = _countryList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder{
-        val view = LayoutInflater.from(context).inflate(R.layout.single_country_model_layout,parent,false)
-        return CountryViewHolder(view)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = SingleCountryModelLayoutBinding.inflate(inflater)
+        return CountryViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
         return countryList.size
     }
 
-    override fun onBindViewHolder(holder:CountryViewHolder, position: Int) {
-        val country = countryList[position]
-        holder.countryName.text = country.name
-        holder.countryCapital.text = country.capital
-        holder.countryPopulation.text = country.population.toString()
-
-    }
+    override fun onBindViewHolder(holder:CountryViewHolder, position: Int) = holder.bind(countryList[position])
 
 
-    class CountryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class CountryViewHolder(private val binding: SingleCountryModelLayoutBinding) : RecyclerView.ViewHolder(binding.root)
     {
-        val countryName : TextView = itemView.findViewById(R.id.country_name)
-        val countryCapital : TextView = itemView.findViewById(R.id.country_capital)
-        val countryPopulation : TextView = itemView.findViewById(R.id.country_population)
-        val countryImage : ImageView = itemView.findViewById(R.id.country_image)
+        fun bind(item: CountryModel) {
+
+                binding.item = item
+                binding.executePendingBindings()
+
+        }
     }
 
 }

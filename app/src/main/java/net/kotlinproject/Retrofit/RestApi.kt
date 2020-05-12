@@ -1,8 +1,8 @@
-package soumyajitdas.com.roomviewmodelkotlinsample.Retrofit
+package net.kotlinproject.retrofit
 
+import net.kotlinproject.model.CountryModel
 import retrofit2.Call
 import retrofit2.http.GET
-import soumyajitdas.com.roomviewmodelkotlinsample.Model.CountryModel
 
 interface RestApi {
 

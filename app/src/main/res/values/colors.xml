@@ -5,10 +5,9 @@
     <color name="colorAccent">#D81B60</color>
     <color name="verticalScrollBar">#008577</color>
     <color name = "white">#ffffff</color>
-
-
     <color name = "actionButton">#373737</color>
     <color name = "equalButton">#FF0000</color>
-    <color name="numberActionButton">#000000</color>
+    <color name = "numberActionButton">#000000</color>
     <color name = "numberActionButton2">#373737</color>
+    <color name = "country_pink">#ff66d9</color>
 </resources>

@@ -1,4 +1,4 @@
-package soumyajitdas.com.roomviewmodelkotlinsample.DB
+package net.kotlinproject.db
 
 
 import androidx.lifecycle.LiveData
@@ -6,7 +6,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import soumyajitdas.com.roomviewmodelkotlinsample.Model.CountryModel
+import net.kotlinproject.model.CountryModel
 
 @Dao
 interface CountryDao {

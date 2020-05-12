@@ -1,4 +1,4 @@
-package soumyajitdas.com.roomviewmodelkotlinsample.Model
+package net.kotlinproject.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,10 +8,10 @@ import androidx.room.PrimaryKey
 data class CountryModel (
 
         @PrimaryKey
-        var name : String,
-        var capital : String,
-        var population : Int,
-        var flag:String
+        val name : String,
+        val capital : String,
+        val population : Int,
+        val flag:String
 
 )
 

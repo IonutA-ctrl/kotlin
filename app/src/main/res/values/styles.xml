@@ -16,9 +16,13 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">0.5dp</item>
-
     </style>
-
+    <style name="countryStyle">
+        <item name="height">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <!-- NumberButtonStyle for keys "1, 2, 3, 4, 5, 6, 7, 8, 9, 0". -->
     <style name="NumberButtonStyle">
         <item name="android:layout_width">0dp</item>
